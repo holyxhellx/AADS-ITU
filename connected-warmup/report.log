@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.5)  8 FEB 2016 10:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.5)  8 FEB 2016 10:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -640,20 +640,6 @@ Class scrartcl Warning: Usage of deprecated font command `\tt'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\tt' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\tt'
-(scrartcl)              by `\normalfont \ttfamily ' on input line 30.
-
-
-Class scrartcl Warning: Usage of deprecated font command `\tt'!
-(scrartcl)              You should note, that in 1994 font command `\tt' has
-(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
-(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
-(scrartcl)              shouldn't use such commands any longer and within
-(scrartcl)              KOMA-Script usage of `\tt' is definitely deprecated.
-(scrartcl)              See `fntguide.pdf' for more information about
-(scrartcl)              recommended font commands.
-(scrartcl)              Note also, that KOMA-Script will remove the definition
-(scrartcl)              of `\tt' anytime until release of about version 3.20.
-(scrartcl)              But for now, KOMA-Script will replace deprecated `\tt'
 (scrartcl)              by `\normalfont \ttfamily ' on input line 31.
 
 
@@ -669,6 +655,20 @@ Class scrartcl Warning: Usage of deprecated font command `\tt'!
 (scrartcl)              of `\tt' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\tt'
 (scrartcl)              by `\normalfont \ttfamily ' on input line 32.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\tt'!
+(scrartcl)              You should note, that in 1994 font command `\tt' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\tt' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\tt' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\tt'
+(scrartcl)              by `\normalfont \ttfamily ' on input line 33.
 
 [1
 
