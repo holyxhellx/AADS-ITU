@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.4)  8 FEB 2016 09:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.5)  8 FEB 2016 10:28
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **report.tex
 (./report.tex
@@ -522,21 +523,41 @@ File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-(./report.aux)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ms/ragged2e.sty
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip54
+\RaggedLeftLeftskip=\skip55
+\RaggedRightLeftskip=\skip56
+\CenteringRightskip=\skip57
+\RaggedLeftRightskip=\skip58
+\RaggedRightRightskip=\skip59
+\CenteringParfillskip=\skip60
+\RaggedLeftParfillskip=\skip61
+\RaggedRightParfillskip=\skip62
+\JustifyingParfillskip=\skip63
+\CenteringParindent=\skip64
+\RaggedLeftParindent=\skip65
+\RaggedRightParindent=\skip66
+\JustifyingParindent=\skip67
+) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -601,6 +622,8 @@ e
 ))
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count138
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 10.
 
 
 LaTeX Warning: No \author given.
@@ -617,7 +640,7 @@ Class scrartcl Warning: Usage of deprecated font command `\tt'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\tt' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\tt'
-(scrartcl)              by `\normalfont \ttfamily ' on input line 24.
+(scrartcl)              by `\normalfont \ttfamily ' on input line 30.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\tt'!
@@ -631,7 +654,7 @@ Class scrartcl Warning: Usage of deprecated font command `\tt'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\tt' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\tt'
-(scrartcl)              by `\normalfont \ttfamily ' on input line 25.
+(scrartcl)              by `\normalfont \ttfamily ' on input line 31.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\tt'!
@@ -645,7 +668,7 @@ Class scrartcl Warning: Usage of deprecated font command `\tt'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\tt' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\tt'
-(scrartcl)              by `\normalfont \ttfamily ' on input line 26.
+(scrartcl)              by `\normalfont \ttfamily ' on input line 32.
 
 [1
 
@@ -653,10 +676,10 @@ Class scrartcl Warning: Usage of deprecated font command `\tt'!
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 14725 strings out of 493089
- 284889 string characters out of 6134843
- 380364 words of memory out of 5000000
- 17958 multiletter control sequences out of 15000+600000
+ 14808 strings out of 493089
+ 286614 string characters out of 6134843
+ 381119 words of memory out of 5000000
+ 18035 multiletter control sequences out of 15000+600000
  10066 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,7n,61p,408b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -665,7 +688,7 @@ Here is how much of TeX's memory you used:
 m/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmssbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmtt10.pfb>
-Output written on report.pdf (1 page, 50221 bytes).
+Output written on report.pdf (1 page, 50573 bytes).
 PDF statistics:
  27 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
