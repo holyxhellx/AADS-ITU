@@ -4,9 +4,9 @@ public class GiantBook {
 
     public static void main(String[] args) {
 
-        // An array of different networks, to do statistics on
+        // Three arrays, to do statistics on later
 
-        int T = 10; // how many networks in array
+        int T = 10; // No. of networks (no. of times of experiment)
         int[] giantArr = new int[T];
         int[] nonisolatedArr = new int[T];
         int[] connectedArr = new int[T];
@@ -16,8 +16,6 @@ public class GiantBook {
 
             // How many sites in the network?
             int N = 10000000;
-            // How many connections to create?
-            // int C = 11;
             // When did the whole network become connected?
             int connected = -1;
             // When did giant component emerge
@@ -66,7 +64,7 @@ public class GiantBook {
             // Operation # is i+1, because we check at the beginning of i+1
             // instead of at the end of i, due to the way the loop is
             // constructed.
-            // But when we counted as humans would, starting from 1
+            // But, when we count as humans would, starting from 1
             // and not from 0, the result is correct.
 
             giantArr[j] = giant;
