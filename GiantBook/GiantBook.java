@@ -44,7 +44,7 @@ public class GiantBook {
                 // Check if giant component exists
                 // Casting to double and comparing doubles, to avoid bugs when
                 // e.g. N == 3, and thus 3/2 == 1.
-                if ((double)(uf.maxComponentSize()) >= (N/2.0) && giant == -1){
+                if ((double)(uf.maxComponentSize()) >= (N*0.5) && giant == -1){
                     giant = i;
                 }
 
