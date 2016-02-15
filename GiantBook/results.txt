@@ -1,0 +1,84 @@
+N = 100
+T: 100
+Giant mean: 71.5
+Giant stddev: 5.885266658050732
+Nonisolated mean: 264.14
+Nonisolated stddev: 64.69602894781227
+Connected mean: 264.69
+Connected stddev: 64.07061997073498
+
+real	0m0.113s
+user	0m0.132s
+sys	0m0.032s
+
+
+N = 1000
+T: 100
+Giant mean: 694.88
+Giant stddev: 16.684402684222558
+Nonisolated mean: 3820.6
+Nonisolated stddev: 603.964210592621
+Connected mean: 3826.09
+Connected stddev: 597.8796895122907
+
+real	0m0.175s
+user	0m0.296s
+sys	0m0.036s
+
+
+N = 10000
+T: 100
+Giant mean: 6923.85
+Giant stddev: 57.82302763823878
+Nonisolated mean: 48657.92
+Nonisolated stddev: 6218.957174395857
+Connected mean: 48657.92
+Connected stddev: 6218.957174395857
+
+real	0m0.483s
+user	0m0.668s
+sys	0m0.044s
+
+
+N = 100000
+T: 100
+Giant mean: 69318.88
+Giant stddev: 156.0987954450448
+Nonisolated mean: 615114.23
+Nonisolated stddev: 66177.13683023448
+Connected mean: 615114.23
+Connected stddev: 66177.13683023448
+
+real	0m5.611s
+user	0m5.788s
+sys	0m0.104s
+
+
+N = 1000000
+T: 10
+Giant mean: 693326.6
+Giant stddev: 701.1029723070483
+Nonisolated mean: 6898503.7
+Nonisolated stddev: 488484.5548182779
+Connected mean: 6898503.7
+Connected stddev: 488484.5548182779
+
+real	0m11.129s
+user	0m12.068s
+sys	0m0.192s
+
+
+N = 10000000
+T: 10
+Giant mean: 6931611.2
+Giant stddev: 1716.2421999499047
+Nonisolated mean: 8.39870302E7
+Nonisolated stddev: 4814046.5236449195
+Connected mean: 8.39870302E7
+Connected stddev: 4814046.5236449195
+
+real	4m2.106s
+user	5m27.392s
+sys	0m2.332s
+
+
