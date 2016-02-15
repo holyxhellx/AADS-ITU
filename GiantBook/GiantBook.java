@@ -5,8 +5,19 @@ public class GiantBook {
     public static void main(String[] args) {
 
         // Three arrays, to do statistics on later
+        int T; // No. of networks (no. of times of experiment)
+        // How many sites in the network?
+        int N;
 
-        int T = 10; // No. of networks (no. of times of experiment)
+
+        if (args.length == 0) {
+            T = 10;
+            N = 10000;
+        } else {
+            T = Integer.parseInt(args[0]);
+            N = Integer.parseInt(args[1]);
+        }
+
         int[] giantArr = new int[T];
         int[] nonisolatedArr = new int[T];
         int[] connectedArr = new int[T];
@@ -14,8 +25,6 @@ public class GiantBook {
 
             // A single network:
 
-            // How many sites in the network?
-            int N = 10000000;
             // When did the whole network become connected?
             int connected = -1;
             // When did giant component emerge
@@ -76,6 +85,7 @@ public class GiantBook {
         // Calculating statistic data
 
         StdOut.println("T: " + T);
+        StdOut.println("N: " + N);
         StdOut.println("Giant mean: " + StdStats.mean(giantArr));
         StdOut.println("Giant stddev: " + StdStats.stddev(giantArr));
         StdOut.println("Nonisolated mean: " + StdStats.mean(nonisolatedArr));

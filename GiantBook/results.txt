@@ -80,5 +80,3 @@ Connected stddev: 4814046.5236449195
 real	4m2.106s
 user	5m27.392s
 sys	0m2.332s
-
-
