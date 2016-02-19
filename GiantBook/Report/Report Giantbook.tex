@@ -2,7 +2,6 @@
 \usepackage{tikz}
 \usepackage{booktabs}
 \usepackage{siunitx}
-\usepackage{amsmath}
 \usepackage{amsmath,amsthm}
 \usepackage{graphicx}
 \usepackage{tikz}
@@ -30,7 +29,7 @@ It shows the average number of random connections needed before the emergence of
 \medskip
 \begin{fullwidth}
 \begin{tabular}{rcccccccc}\toprule
-$N$ & $T$ & giant & (stddev) & no isolated & (stddev) & connected & (stddev)\\\midrule
+$N$ & $T$ & giant & (stddev) & non-isolated & (stddev) & connected & (stddev)\\\midrule
 
 100 & 100 &         	\num{7.15e+01} & \num{5.9e+00}	& \num{5.88e+02} & \num{6.64e+01} &\num{2.69e+02} & \num{6.40e+01} \\ 
 1000 & 100 &       	\num{6.94e+02} & \num{1.66e+01} 	& \num{3.82e+03} & \num{6.95e+02} & \num{3.83e+03} & \num{5.97e+02} \\
@@ -46,15 +45,17 @@ $N$ & $T$ & giant & (stddev) & no isolated & (stddev) & connected & (stddev)\\\m
 Our main findings are the following:
 The first thing that happens is that the giant component emerges, which done by regression looks like: 
 \center 
-y = 8,420414x - 334445,4. \\
+y = 8,420414x - 334445,4 \\
 \justify
 Perhaps surprisingly, two of the events seem to happen simultaneously, namely non-isolated and connected, which happen at time linear to $N$.
 
 \subsection{Implementation details}
 
-We have based our union--find data type on {WeightedQuickUnionUF\tt .java} from Sedgewick and Wayne: {\em Algorihthms, 4th ed.}, Addison--Wesley (2011). We added two attributes to MyUnionFind: \\
-- a maxComponentSize() \\
-- a set called isolated(), which contains all the isolated sites. \\
+We have based our union-find data type on {WeightedQuickUnionUF\tt .java} from Sedgewick and Wayne: {\em Algorihthms, 4th ed.}, Addison-Wesley (2011). We added two attributes to MyUnionFind:
+\begin{itemize}
+\item a maxCompenentSize()
+\item a set called isolated(), which contains all the isolated sites
+\end{itemize}
 In the constructor the isolated set is populated with all the sites, since at initialization they are all isolated. Also The max component size is set to 1, since at initialization none of the sites are connected.
 in the union method, we update the max component size if the newly created component is larger than the current max component size.
 Also both of the sites that have been united are now removed from the isolated set, since now neither of these are isolated. \\
@@ -77,7 +78,9 @@ To calculate this we modified the algorithm to break when the giant component em
   \bottomrule
 \end{tabular}\\ \\
 
-Linear regression: y = 540340.8 x + 22706.49 \\		y = 540340.8 * 86400 + 22706.49 = 46,685,500,000
+Linear regression: y = 540340.8 x + 22706.49 \\
+
+		y = 540340.8 * 86400 + 22706.49 = 46,685,500,000 
 
 \subsection{Discussion}
 
