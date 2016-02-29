@@ -20,7 +20,14 @@ public class RandomQueue<Item> //implements Iterable<Item>
         a = temp;
     }
 
-    private void exch(int i, int j) // exchange two items in the array
+    private void resize(Item[] a, int max, int N) {
+        Item[] temp = (Item[]) new Object[max];
+        for (int i = 0; i < N; i++)
+            temp[i] = a[i];
+        a = temp;
+    }
+
+    private void exch(Item[] a, int i, int j) // exchange two items in the array
     {
         Item t = a[i];
         a[i] = a [j];
@@ -48,10 +55,19 @@ public class RandomQueue<Item> //implements Iterable<Item>
     public Item dequeue() // remove and return a random item
     {
         int r = StdRandom.uniform(0, N); // random value in [0,N)
-        exch(r, (N-1)); // exchange random item with last item
+        exch(a, r, (N-1)); // exchange random item with last item
         Item item = a[--N]; // set new last item as the item to be returned
         a[N] = null; // avoid loitering, set old last item to null
         if (N > 0 && N == a.length/4) resize(a.length/2); // resize
+        return item;
+    }
+
+    private Item dequeue(Item[] a, int N) {
+        int r = StdRandom.uniform(0, N);
+        exch(a, r, (N-1));
+        Item item = a[--N];
+        a[N] = null;
+        if (N > 0 && N == a.length/4) resize(a, a.length/2, N);
         return item;
     }
 
@@ -71,13 +87,7 @@ public class RandomQueue<Item> //implements Iterable<Item>
         public Item next()
         {
             //completely ugly implementation, but it works :)
-            int r = StdRandom.uniform(0, i);
-            Item tt = b[i-1];
-            b[i-1] = b[r];
-            b[r] = tt;
-            Item item = b[--i];
-            b[i] = null;
-            return item;
+            return dequeue(b, i--); 
         }
     }
 
