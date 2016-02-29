@@ -1,17 +1,19 @@
 import edu.princeton.cs.algs4.*;
 import java.util.Iterator;
 
-public class RandomQueue<Item> //implements Iterable<Item>
+public class RandomQueue<Item> implements Iterable<Item>
 {
     // Data fields
     private int N = 0; // number of items
     private Item[] a;
 
     // Constructor
+    @SuppressWarnings("unchecked")
     public RandomQueue() // create an empty random queue
     { a = (Item[]) new Object[1]; } // set array to size 1
 
     // Methods
+    @SuppressWarnings("unchecked")
     private void resize(int max) // resize array
     {
         Item[] temp = (Item[]) new Object[max];
@@ -19,7 +21,7 @@ public class RandomQueue<Item> //implements Iterable<Item>
             temp[i] = a[i];
         a = temp;
     }
-
+    @SuppressWarnings("unchecked")
     private void resize(Item[] a, int max, int N) {
         Item[] temp = (Item[]) new Object[max];
         for (int i = 0; i < N; i++)
