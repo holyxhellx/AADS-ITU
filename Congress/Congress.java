@@ -21,8 +21,7 @@ public class Congress {
 
         for (int i = numberOfSeats; i > 0; i--) {
             StdOut.println(i);
-            States head = null;
-            head = pq.delMax();
+            States head = pq.delMax();
             States newHead = null;
             int newSeatsReceived = head.seatsReceived;
             int newNumberOfRemainingResidents = head.numberOfRemainingResidents - constant;
