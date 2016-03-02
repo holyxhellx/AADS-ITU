@@ -56,17 +56,17 @@ Nebraska
 1584617
 Nevada              
 1206152
-New Hampshire       
+NewHampshire       
 1113915
-New Jersey          
+NewJersey          
 7748634
-New Mexico          
+NewMexico          
 1521779
-New York            
+NewYork            
 18044505
-North Carolina      
+NorthCarolina      
 6657630
-North Dakota        
+NorthDakota        
 641364
 Ohio                
 10887325
@@ -76,11 +76,11 @@ Oregon
 2853733
 Pennsylvania        
 11924710
-Rhode Island        
+RhodeIsland        
 1005984
-South Carolina      
+SouthCarolina      
 3505707
-South Dakota        
+SouthDakota        
 699999
 Tennessee           
 4896641
@@ -94,7 +94,7 @@ Virginia
 6216568
 Washington          
 4887941
-West Virginia       
+WestVirginia       
 1801625
 Wisconsin           
 4906745
