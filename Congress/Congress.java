@@ -9,26 +9,31 @@ public class Congress {
         int numberOfStates = Integer.parseInt(StdIn.readLine());
         int numberOfSeats = Integer.parseInt(StdIn.readLine()) - numberOfStates;
 
-        MaxPQ<States> pq = new MaxPQ<States>(numberOfStates, new SeatComparator());
+        MaxPQ<State> pq = new MaxPQ<State>(numberOfStates, new StateComparator());
         while (StdIn.hasNextLine()) {
             String stateName = StdIn.readLine();
             int statePopulation = Integer.parseInt(StdIn.readLine());
-            int priorityValue = (int) (statePopulation / (Math.sqrt(2 * 1)));
-            pq.insert(new States(stateName, 1, statePopulation, priorityValue));
+            int currentSeat = 1;
+            int priorityValue = calculatePriorityValue(statePopulation, currentSeat);
+            pq.insert(new State(stateName, currentSeat, statePopulation, priorityValue));
         }
 
         while (numberOfSeats > 0) {
-            States head = pq.delMax();
-            int newSeats = head.seatsReceived + 1;
-            int priorityValue = (int) (head.numberOfTotalResidents / (Math.sqrt(newSeats * (newSeats + 1))));
-            pq.insert(new States(head.name, newSeats, head.numberOfTotalResidents, priorityValue));
+            State currentState = pq.delMax();
+            int newSeats = currentState.seats + 1;
+            int priorityValue = calculatePriorityValue(currentState.population, newSeats);
+            pq.insert(new State(currentState.name, newSeats, currentState.population, priorityValue));
             numberOfSeats--;
         }
 
-        for (States element : pq) {
-            StdOut.println(element.name + " " + element.seatsReceived);
+        for (State element : pq) {
+            StdOut.println(element.name + " " + element.seats);
         }
 
         StdOut.println("=====");
+    }
+
+    private static int calculatePriorityValue(int statePopulation, int currentSeat) {
+        return (int) (statePopulation / (Math.sqrt(currentSeat * (currentSeat + 1))));
     }
 }
