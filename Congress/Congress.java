@@ -1,28 +1,28 @@
-import java.util.PriorityQueue;
 import edu.princeton.cs.algs4.*;
+import java.lang.Math.*;
 
 public class Congress {
 
     public static void main(String[] args) {
         StdOut.println("=====");
 
-        int numberOfStates = StdIn.readInt(); //2
-        int numberOfSeats = StdIn.readInt() - numberOfStates; //4-2
+        int numberOfStates = Integer.parseInt(StdIn.readLine());
+        int numberOfSeats = Integer.parseInt(StdIn.readLine()) - numberOfStates;
 
-        PriorityQueue<States> pq = new PriorityQueue<States>(numberOfStates, new SeatComparator());
-        for (int i = 0; i < numberOfStates; i++) {
-            String tmpName = StdIn.readString();
-            StdOut.println(i);
-            int tmpPopulation = StdIn.readInt();
-            States state = new States(tmpPopulation, tmpName, 1);
-            pq.add(state);
-        } 
+        MaxPQ<States> pq = new MaxPQ<States>(numberOfStates, new SeatComparator());
+        while (StdIn.hasNextLine()) {
+            String stateName = StdIn.readLine();
+            int statePopulation = Integer.parseInt(StdIn.readLine());
+            int priorityValue = (int) (statePopulation / (Math.sqrt(2 * 1)));
+            pq.insert(new States(stateName, 1, statePopulation, priorityValue));
+        }
 
-        for (int i = numberOfSeats; i > 0; i--) {
-            States head = pq.poll();
-            head.numberOfRemainingResidents -= 10;
-            head.seatsReceived += 1;
-            pq.add(head);
+        while (numberOfSeats > 0) {
+            States head = pq.delMax();
+            int newSeats = head.seatsReceived + 1;
+            int priorityValue = (int) (head.numberOfTotalResidents / (Math.sqrt(newSeats * (newSeats + 1))));
+            pq.insert(new States(head.name, newSeats, head.numberOfTotalResidents, priorityValue));
+            numberOfSeats--;
         }
 
         for (States element : pq) {
