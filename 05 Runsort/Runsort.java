@@ -43,8 +43,9 @@ public class Runsort {
 	        	
 	        	// first run
 	            int lo = i;
-	        	while(! less(a[i+1],a[i])) i++; 
+	        	while(i<N-1 && ! less(a[i+1],a[i])) i++; 
 	        	int m = i;
+	        	if(m == N-1) continue; // skip to next round if there's no second run to merge with
 
 	        	// second run
 	        	i++;
@@ -52,24 +53,14 @@ public class Runsort {
 	        	int hi = i;
 
 	        	merge(a, aux, lo, m, hi); // merge runs
-	        	
-	        	i++;
-				if(lo == 0 && hi == N-1) break outerloop; // if sorted break
+	        
+	        	// if there was only two runs before merging
+	        	// there will now be one and the array will be sorted
+				if(lo == 0 && hi == N-1) break outerloop; 
+
+				i++;
 	        }
         }
-       
-        
-        
-
-        /*
-        for (int n = 1; n < N; n = n+n) {
-            for (int i = 0; i < N-n; i += n+n) {
-                int lo = i;
-                int m  = i+n-1;
-                int hi = Math.min(i+n+n-1, N-1);
-                merge(a, aux, lo, m, hi);
-            }
-        }*/
     }
 
   	/***********************************************************************
