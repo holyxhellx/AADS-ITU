@@ -30,6 +30,38 @@ public class Runsort {
     public static void sort(Comparable[] a) {
         int N = a.length;
         Comparable[] aux = new Comparable[N];
+
+        outerloop:
+        while(true)
+        {
+	        StdOut.println("new round");
+	        show(a);
+
+	        int i = 0;
+	      
+	        while(i<N-1) {
+	        	
+	        	// first run
+	            int lo = i;
+	        	while(! less(a[i+1],a[i])) i++; 
+	        	int m = i;
+
+	        	// second run
+	        	i++;
+	        	while(i<N-1 && !less(a[i+1],a[i])) i++;
+	        	int hi = i;
+
+	        	merge(a, aux, lo, m, hi); // merge runs
+	        	
+	        	i++;
+				if(lo == 0 && hi == N-1) break outerloop; // if sorted break
+	        }
+        }
+       
+        
+        
+
+        /*
         for (int n = 1; n < N; n = n+n) {
             for (int i = 0; i < N-n; i += n+n) {
                 int lo = i;
@@ -37,50 +69,38 @@ public class Runsort {
                 int hi = Math.min(i+n+n-1, N-1);
                 merge(a, aux, lo, m, hi);
             }
-        }
-        assert isSorted(a);
+        }*/
     }
 
   	/***********************************************************************
     *  Helper sorting functions.
     ***************************************************************************/
-    
+   
     // is v < w ?
+    @SuppressWarnings("unchecked")
     private static boolean less(Comparable v, Comparable w) {
         return v.compareTo(w) < 0;
     }
 
-   // exchange a[i] and a[j]
-    private static void exch(Object[] a, int i, int j) {
-        Object swap = a[i];
-        a[i] = a[j];
-        a[j] = swap;
-    }
+	private static void show(Comparable[] a)
+	{
+		for (int i = 0; i < a.length; i ++) StdOut.print(a[i] + " ");
+		StdOut.println();
+	}
 
+	private static boolean isSorted(Comparable[] a)
+	{
+		for (int i = 1; i < a.length; i++)
+			if (less(a[i], a[i-1])) return false;
+		return true;
+	}
 
-   /***************************************************************************
-    *  Check if array is sorted - useful for debugging.
-    ***************************************************************************/
-    private static boolean isSorted(Comparable[] a) {
-        for (int i = 1; i < a.length; i++)
-            if (less(a[i], a[i-1])) return false;
-        return true;
-    }
+	public static void main(String[] args)
+	{
+		String[] a = StdIn.readAllStrings();
+		sort(a);
+		StdOut.println("Is sorted: " + isSorted(a));
+		show(a);
+	}
 
-    // print array to standard output
-    private static void show(Comparable[] a) {
-        for (int i = 0; i < a.length; i++) {
-            StdOut.println(a[i]);
-        }
-    }
-
-    /**
-     * Reads in a sequence of strings from standard input; bottom-up
-     * mergesorts them; and prints them to standard output in ascending order. 
-     */
-    public static void main(String[] args) {
-        String[] a = StdIn.readAllStrings();
-        Runsort.sort(a);
-        show(a);
-    }
 }
