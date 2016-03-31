@@ -65,7 +65,7 @@ public class Runsort {
 	        	while(i<N-1 && !less(a[i+1],a[i])) i++;
 	        	int hi = i;
 
-	        	//fancy - something something...
+	        	//Select sort method: Insertion or runsort
 	        	if (hi-lo <= 8) {
 	        		insertSort(a, lo, hi); //insertSort runs
 	        	} else {
